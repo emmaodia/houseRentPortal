@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   # def index
   #   @houses = House.all
   # end
-  get "/pages/:home" => "pages#home"
+  def show
+    render template: "pages/#{params[:page]}"
+  end
 end
