@@ -1,3 +1,8 @@
-<h2>Home Page</h2>
+<h1>Pages#home</h1>
 
-<p>This would be a static home page in a Rails application.</p>
+<% if current_landlord %>
+  <%= link_to 'Sign out', destroy_landlord_session_path, :method => :delete %>
+<% else %>
+  <%= link_to 'Sign up', new_landlord_registration_path %>
+  <%= link_to 'Sign in', new_landlord_session_path %>
+<% end %>
