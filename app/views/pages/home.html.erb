@@ -1,8 +1,3 @@
 <h1>Pages#home</h1>
 
-<% if current_landlord %>
-  <%= link_to 'Sign out', destroy_landlord_session_path, :method => :delete %>
-<% else %>
-  <%= link_to 'Sign up', new_landlord_registration_path %>
-  <%= link_to 'Sign in', new_landlord_session_path %>
-<% end %>
+<%= link_to 'Auth', pages_auth_path %>
