@@ -1,7 +1,7 @@
 module Accessible
   extend ActiveSupport::Concern
   included do
-    before_action :check_user
+    before_filter :check_user
   end
 
   protected
