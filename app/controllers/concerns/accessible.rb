@@ -1,7 +1,8 @@
 module Accessible
   extend ActiveSupport::Concern
   included do
-    before_filter :check_user
+    before_action :check_user
+    before_action :check_landlord
   end
 
   protected
