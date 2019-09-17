@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-include Accessible
 class Landlords::SessionsController < Devise::SessionsController
+  include Accessible
+  skip_before_action :check_landlord, only: :destroy
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

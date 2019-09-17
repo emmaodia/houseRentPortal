@@ -1,0 +1,4 @@
+<h1>Welcome to Landlord Dashboard</h1>
+<% if current_landlord %>
+  <%= link_to 'Sign out', destroy_landlord_session_path, :method => :delete %>
+<% end %>
